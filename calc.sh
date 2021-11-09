@@ -4,18 +4,21 @@ R='\033[0;31m'
 B='\033[0;34m'
 Y='\033[1;33m'
 G='\033[0;32m'
+C='\033[0;36m'
+P='\033[1;35m'
+NC='\033[0m' # No Color
 
 #Greeting
-echo "Hello, Mathematician!"
+echo -e "${Y}Hello, Mathematician!${NC}"
 
 while true
 do
   # Input numbers
     echo ""
-    echo -e "Input Numbers..."
-    echo -n "Enter first number: "
+    echo -e "${NC}Input Numbers..."
+    echo -n -e "${B}Enter first number: " ${C} 
     read NUM1
-    echo -n "Enter second number: "
+    echo -n -e "${B}Enter second number: " ${C} 
     read NUM2
 
   # Input type of operation
