@@ -23,22 +23,22 @@ do
 
   # Input type of operation
     echo ""
-    echo "Enter number of choice:"
+    echo "${NC}Enter number of choice:"
     echo "1 - Addition"
     echo "2 - Subtraction"
     echo "3 - Exit"
-    echo -n "Choice: "
+    echo -n -e "${C} Choice: " ${NC} 
     read OP
 
   # Case Statement for menu and operation
     case $OP in
       1)
         let "SUM= $NUM1 + $NUM2"
-        echo "Result:" $NUM1 "+" $NUM2 "=" $SUM
+        echo "${G}Result:" $NUM1 "+" $NUM2 "=" $SUM ${NC}
         ;;
       2)
         let "DIFF= $NUM1 + $NUM2"
-        echo "Result:" $NUM1 "-" $NUM2 "=" $DIFF
+        echo "${G}Result:" $NUM1 "-" $NUM2 "=" $DIFF ${NC}
         ;; 
       3)
         echo "Thank you for using my amazing calculator!"
