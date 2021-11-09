@@ -1,4 +1,5 @@
 #! /usr/bin/env bash
+
 # Colors for formatting
 R='\033[0;31m'
 B='\033[0;34m'
@@ -15,38 +16,37 @@ while true
 do
   # Input numbers
     echo ""
-    echo -e "${NC}Input Numbers..."
-    echo -n -e "${B}Enter first number: " ${C} 
+    echo -e "${NC}Input numbers..."
+    echo -n -e "${B}Enter first number: " ${NC} 
     read NUM1
-    echo -n -e "${B}Enter second number: " ${C} 
+    echo -n -e "${B}Enter second number: " ${NC} 
     read NUM2
 
   # Input type of operation
     echo ""
-    echo "${NC}Enter number of choice:"
+    echo -e "${NC}Enter number of choice:"
     echo "1 - Addition"
     echo "2 - Subtraction"
     echo "3 - Exit"
-    echo -n -e "${C} Choice: " ${NC} 
+    echo -n -e "${C}Choice: " ${NC} 
     read OP
 
   # Case Statement for menu and operation
     case $OP in
       1)
         let "SUM= $NUM1 + $NUM2"
-        echo "${G}Result:" $NUM1 "+" $NUM2 "=" $SUM ${NC}
+        echo -e "${G}Result:" $NUM1 "+" $NUM2 "=" $SUM ${NC}
         ;;
       2)
-        let "DIFF= $NUM1 + $NUM2"
-        echo "${G}Result:" $NUM1 "-" $NUM2 "=" $DIFF ${NC}
+        let "DIFF= $NUM1 - $NUM2"
+        echo -e "${G}Result:" $NUM1 "-" $NUM2 "=" $DIFF ${NC}
         ;; 
       3)
-        echo "Thank you for using my amazing calculator!"
+        echo -e "${P}Thank you for using the amazing calculator!"
         break
         ;;
       *)
-        echo "Invalid input. Please try again."
+        echo -e "${R}Invalid input. Please try again."
         ;;
     esac
-
-  done
+done
