@@ -15,13 +15,15 @@ echo -e "${Y}Hello, Mathematician!${NC}"
 while true
 do
   # Input numbers
+    NUM1=0
+    NUM2=0
     echo ""
     echo -e "${NC}Input numbers..."
     echo -n -e "${B}Enter first number: " ${NC} 
     read NUM1
     echo -n -e "${B}Enter second number: " ${NC} 
     read NUM2
-
+      
   # Input type of operation
     echo ""
     echo -e "${NC}Enter number of choice:"
@@ -30,6 +32,14 @@ do
     echo "3 - Exit"
     echo -n -e "${C}Choice: " ${NC} 
     read OP
+
+  if [[ "$NUM1" = "" ]] ; then
+    NUM1=0
+  fi
+
+  if [[ "$NUM2" = "" ]] ; then
+    NUM2=0
+  fi
 
   # Case Statement for menu and operation
     case $OP in
