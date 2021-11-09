@@ -1,3 +1,5 @@
+echo "Hello, Mathematician!"
+
 while true
 do
   # Input numbers
