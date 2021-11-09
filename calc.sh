@@ -16,11 +16,11 @@
 
   case $OP in
     1)
-      SUM=expr $NUM1 + $NUM2
+      let "SUM= $NUM1 + $NUM2"
       echo "Result:" $NUM1 "+" $NUM2 "=" $SUM
       ;;
     2)
-      DIFF=expr $NUM1 + $NUM2
+      let "DIFF= $NUM1 + $NUM2"
       echo "Result:" $NUM1 "-" $NUM2 "=" $DIFF
       ;; 
     3)
